@@ -37,7 +37,7 @@ To get the label you want for a certain 64x64 CTU, you can index the dict by: ``
 
 ### Example for loading the dataset
 
-Here's an example for loading the dataset in deep learning projects implemented in PyTorch. Find the example in ```load_example.py```
+Here's an example for loading the dataset in deep learning projects implemented in PyTorch. Find the example in ```load_example.py```. Mind that the example is used to load 32x32 image blocks and predict 4 corresponding labels.
 
 ### How to use the dataset in deep learning?
 
@@ -50,7 +50,7 @@ In HEVC intra-prediction, for each 64x64 CTU, it will take the encoder a lot of 
 
 ### Advanced Option: build your own dataset
 
-I provide my source code for generating the dataset here. You can modify my code ```gen_dataset.py``` to build your own dataset. Here are some tips:
+I provide my source code for generating the dataset here. You can modify my code ```gen_dataset.py``` to build your own dataset. It's better to download the whole ```Advanced``` folder. Here are some tips:
 
 TIP 1: Download YUV file resources
 
@@ -69,5 +69,27 @@ TIP 2: Check the directories in the code for:
 - The directory of YUV files
 - The directory of the config files for HEVC encoder
 - The directory to store temporary frames extracted from YUV files
+
+TIP 3: Here are the YUV files already used in the dataset:
+
+| type  |               Train               |         Validation          |              Test              |
+| ----- | --------------------------------- | --------------------------- | ------------------------------ |
+| 2K    | NebutaFestival_2560x1600_60       | PeopleOnStreet_2560x1600_30 | Traffic_2560x1600_30           |
+|       | SteamLocomotiveTrain_2560x1600_60 |                             |                                |
+| 1080p | BasketballDrive_1920x1080_50      | BQTerrace_1920x1080_60      | Cactus_1920x1080_50            |
+|       | Kimono1_1920x1080_24              |                             |                                |
+|       | Tennis_1920x1080_24               |                             |                                |
+|       | ParkScene_1920x1080_24            |                             |                                |
+| 720p  | FourPeople_1280x720_60            | SlideShow_1280x720_20       | KristenAndSara_1280x720_60     |
+|       | SlideEditing_1280x720_30          |                             |                                |
+| 480p  | BasketballDrill_832x480_50        | Flowervase_832x480_30       | BQMall_832x480_60              |
+|       | Keiba_832x480_30                  | Mobisode2_832x480_30        | PartyScene_832x480_50          |
+|       | RaceHorses_832x480_30             |                             |                                |
+| 288   | waterfall_352x288_20              | akiyo_352x288_20            | container_352x288_20           |
+|       | flower_352x288_20                 | coastguard_352x288_20       |                                |
+|       | highway_352x288_20                |                             |  |
+|       | news_352x288_20                   |                             |                                |
+|       | paris_352x288_20                  |                             |                                |
+| 240   | BasketballPass_416x240_50         | BlowingBubbles_416x240_50   | BQSquare_416x240_60            |
 
 It will take some time to generate the dataset. Be prarared.
