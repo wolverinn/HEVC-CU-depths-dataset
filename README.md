@@ -7,6 +7,8 @@ In HEVC intra-prediction, each I-frame is divided into 64x64 Coding Tree Units (
 
 The dataset contains images and corresponding labels. There're three folders: ```train```, ```validation```, ```test```
 
+**Unzip the images and label files first!**
+
 - Image files: Each image may have different size, and is one frame extracted from a video. When you use it, you can split the image into several 64x64 images or 32x32 and so on.
 - Labels: The labels are in the ```pkl``` folder. For one CTU, which is a 64x64 image file, the label will be a Python list with a length of 16. Why a length 16 vector instead of a 16x16 matrix? Because there's redundant information for a 16x16 matrix, and it can be reduced to a 16x1 vector. So, for a 64x64 CTU, it has 16 labels, each label corresponds to a 16x16 image block in the CTU.
 
