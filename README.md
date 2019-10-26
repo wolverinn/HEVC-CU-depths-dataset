@@ -52,7 +52,7 @@ In HEVC intra-prediction, for each 64x64 CTU, it will take the encoder a lot of 
 
 I provide my source code for generating the dataset here. You can modify my code ```gen_dataset.py``` to build your own dataset. It's better to download the whole ```Advanced``` folder. Here are some tips:
 
-TIP 1: Download YUV file resources
+**TIP 1**: Download YUV file resources
 
 YUV files are used as input of HEVC encoder, and as output, you will get the 16x16 matrix, which you can later process. At the same time, you can use FFmpeg to extract each frame from YUV files.
 
@@ -64,13 +64,13 @@ Here are some sites to find YUV resources:
 - [ SJTU 4K Video Sequences](http://medialab.sjtu.edu.cn/web4k/index.html)
 - [Ultra Video Group](http://ultravideo.cs.tut.fi/#testsequences)
 
-TIP 2: Check the directories in the code for:
-- The directory of image files and pickle files
-- The directory of YUV files
-- The directory of the config files for HEVC encoder
-- The directory to store temporary frames extracted from YUV files
+**TIP 2**: Check the directories in the code for:
+- The directory of image files and pickle files: ```/dataset/img/train```, ```/dataset/img/test```, ```/dataset/img/validation```, ```/dataset/pkl/train```, ```/dataset/pkl/test```, ```/dataset/pkl/validation```
+- The directory of YUV files: ```/yuv-file/train```, ```/yuv-file/test```, ```/yuv-file/validation```
+- The directory of the config files for HEVC encoder: ```/config```
+- The directory to store temporary frames extracted from YUV files: ```/temp-frames```
 
-TIP 3: Here are the YUV files already used in the dataset:
+**TIP 3**: Here are the YUV files already used in the dataset:
 
 | type  |               Train               |         Validation          |              Test              |
 | ----- | --------------------------------- | --------------------------- | ------------------------------ |
