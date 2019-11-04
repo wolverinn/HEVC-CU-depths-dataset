@@ -53,7 +53,7 @@ class ImageSet(data.Dataset):
         layer2 = self.img_files[index][2]
         img_width, _ = img.size
         img_row = ctu_number // math.ceil(img_width / 64)
-        img_colonm = ctu_number % math.ceil(img_width / 64)-1
+        img_colonm = ctu_number % math.ceil(img_width / 64)
         start_pixel_x = img_colonm * 64 + (layer2 % 2)*32
         start_pixel_y = img_row * 64 + (layer2 // 2)*32
         cropped_img = img.crop((start_pixel_x, start_pixel_y, start_pixel_x + 32, start_pixel_y + 32)) # 依次对抽取到的帧进行裁剪
