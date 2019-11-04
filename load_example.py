@@ -29,7 +29,7 @@ def from_ctufile(load_type,video_number,frame_number,ctu_number,layer2):
     elif layer2 == 2:
         label_list = [ctu_info[8],ctu_info[9],ctu_info[12],ctu_info[13]]
     else:
-        label_list = [ctu_info[10],ctu_info[11],ctu_info[12],ctu_info[15]]
+        label_list = [ctu_info[10],ctu_info[11],ctu_info[14],ctu_info[15]]
     label = torch.tensor(label_list)
     return label
 
