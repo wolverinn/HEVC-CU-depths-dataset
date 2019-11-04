@@ -94,4 +94,6 @@ Here are some sites to find YUV resources:
 |       | paris_352x288_20                  |                             |                                |
 | 240   | BasketballPass_416x240_50         | BlowingBubbles_416x240_50   | BQSquare_416x240_60            |
 
+The markdown file in the ```Advanced``` folder explains how my ```TAppEncoder.exe``` is made. It shows how to modify HEVC source code to output the information you need like depth info.
+
 It will take some time to generate the dataset. Be prarared.
